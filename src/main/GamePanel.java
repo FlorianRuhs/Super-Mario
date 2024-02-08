@@ -24,10 +24,6 @@ public class GamePanel extends JPanel implements Runnable{
     Thread gameThread;
     Player player = new Player(this,keyH);
 
-    // Set player's default position
-    int playerX = 100;
-    int playerY = 100;
-    int playerSpeed = 4;
 
     public GamePanel () {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -43,38 +39,6 @@ public class GamePanel extends JPanel implements Runnable{
         gameThread.start();
     }
 
-    @Override
-   /* public void run() {
-
-        double drawInterval = 1000000000/FPS;
-        double nextDrawTime = System.nanoTime() + drawInterval;
-
-        while (gameThread != null) {
-
-            update();
-
-            repaint();
-
-            try {
-                double reaminingTime = nextDrawTime - System.nanoTime();
-                reaminingTime = reaminingTime/1000000;
-
-                if(reaminingTime < 0) {
-                    reaminingTime = 0;
-                }
-
-                Thread.sleep((long) reaminingTime);
-
-                nextDrawTime += drawInterval;
-
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-        }
-
-    }
-    */
     public void run () {
 
         double drawInterval = 1000000000/FPS;

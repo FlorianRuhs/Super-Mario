@@ -1,4 +1,4 @@
-package main.tile;
+package tile;
 
 import main.GamePanel;
 
@@ -14,6 +14,7 @@ public class TileManager {
     public  TileManager(GamePanel gp) {
         this.gp = gp;
         tile = new Tile[10];
+        getTileImage();
     }
 
     public  void getTileImage() {
@@ -38,6 +39,8 @@ public class TileManager {
     public  void  draw(Graphics2D g2) {
 
         g2.drawImage(tile[0].image, 0, 0, gp.tileSize, gp.tileSize, null);
+        g2.drawImage(tile[1].image, 48, 0, gp.tileSize, gp.tileSize, null);
+        g2.drawImage(tile[2].image, 96, 0, gp.tileSize, gp.tileSize, null);
 
     }
 

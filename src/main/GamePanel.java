@@ -1,7 +1,7 @@
 package main;
 
 import entity.Player;
-import main.tile.TileManager;
+import tile.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,10 +9,10 @@ import java.awt.*;
 public class GamePanel extends JPanel implements Runnable{
 
     // SCREEN SETTINGS
-    final int orginalTileSize = 16; // 16x16 main.tile
+    final int orginalTileSize = 16; // 16x16 tile
     final int scale  = 3;
 
-    public final int tileSize =orginalTileSize * scale; // 48x48 main.tile
+    public final int tileSize =orginalTileSize * scale; // 48x48 tile
     final int  maxScreenCol = 16;
     final int maxScreenRow = 12;
     final int screenWidth = tileSize * maxScreenCol; // 768 pixels

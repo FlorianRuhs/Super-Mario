@@ -60,7 +60,7 @@ public class TileManager {
 
                     String numbers[] = line.split(" ");
                     int num = Integer.parseInt(numbers[col]);
-                    mapTileNum[col] [row] = num;
+                    mapTileNum[col][row] = num;
                     col++;
                 }
                 if (col == gp.maxScreenCol) {
@@ -98,8 +98,6 @@ public class TileManager {
                 y += gp.tileSize;
             }
         }
-
-
 
     }
 

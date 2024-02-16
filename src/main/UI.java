@@ -15,6 +15,8 @@ public class UI {
     int messageCounter = 0;
     public boolean gameFinished = false;
 
+    double playTime;
+
     public UI(GamePanel gp) {
         this.gp = gp;
 
@@ -65,6 +67,10 @@ public class UI {
             g2.setColor(Color.white);
             g2.drawImage(keyImage, gp.tileSize/2, gp.tileSize/2, gp.tileSize, gp.tileSize, null);
             g2.drawString("x " + gp.player.hasKey,74, 65);
+
+            // Time
+            playTime +=(double) 1/60;
+            g2.drawString("Time: "+playTime,gp.tileSize*11,65);
 
             // Message
             if(messageOn == true) {
